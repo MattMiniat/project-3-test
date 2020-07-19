@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mental and behavioural disorders (F00-F99)</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/js/stylesheet.css">
+        <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    </head>
+
+
+<!-- Note: navbar is small for some reason and extends across the screen -->
+    <body>
+        <div class = "row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Mental and behavioural disorders</h1>
+              </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <div id="vizContainer"></div>
+            </div>
+        </div>
+        <!-- tableu javascript code import -->
+        <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+        <script>
+            var viz
+
+            // function to put tableau on screen, using example link.
+            function initViz() {
+                var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/COD_mental_15951117429830/MentalDash?:language=en&:retry=yes&:display_count=y&:origin=viz_share_link"; // <- insert link here
+                viz = new tableau.Viz(containerDiv, url);
+            }
+            initViz();
+
+        </script>
+
+        <!-- Follor up Text for disease description -->
+        <div class ="container">
+            <article class = "row">
+                <div class="col-lg-8">
+                    <article class="decription content">
+                        <p> 
+                            Prominent Diseases:
+                            <ul>
+                                <li>Dementia and other amnestic disorders (90.8% of deaths)</li>
+                                <li>Disorders due to substance abuse (8.6% of deaths)</li>
+                            </ul>
+                            Dementia and other amnestic disorders account for the vast majority of deaths in this category. These are characterized by a deterioration of cognitive function often caused by Alzheimer’s or stroke. This sub-category is most heavily influenced by age, with 99.9% of deaths in the dementia subcategory being individuals over the age of 55 and 68% being over the age of 85. Because individuals aged over 85 years represent a majority of the deaths, the data is skewed towards females (64.4% of deaths) because female life expectancy (81.1) is higher than male life expectancy (76.1).
+                            <br>
+                            <br>
+                            More info:
+                            <ul>
+                                <li><a href="https://www.nia.nih.gov/health/what-dementia-symptoms-types-and-diagnosis">Dementia</a></li>
+                                <li><a href="https://www.drugabuse.gov/publications/drugfacts/understanding-drug-use-addiction">Substance Abuse</a></li>
+                            </ul>
+                        </p>
+                    </article>
+                </div>
+            </article>
+        </div>
+    </body>
+
+</html>

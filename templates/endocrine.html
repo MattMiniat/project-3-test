@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>Endocrine, nutritional and metabolic diseases (E00-E90)</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/js/stylesheet.css">
+        <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    </head>
+
+
+<!-- Note: navbar is small for some reason and extends across the screen -->
+    <body>
+        <div class = "row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Endocrine. Nutritional, and Metabolical Diseases</h1>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 central">
+                
+                <div id="vizContainer"></div>
+            </div>
+        </div>
+        <!-- tableu javascript code import -->
+        <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+        
+        <script>
+            var viz
+
+            // function to put tableau on screen, using example link.
+            function initViz() {
+                var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/COD_endocrine_15950909633820/EndocrineDash?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"; // <- insert link here
+                var options = {
+                    width: '600px',
+                    height: '600px',
+                    hideTabs: true,
+                    hideToolbar: true,
+                };
+                viz = new tableau.Viz(containerDiv, url);
+            }
+            initViz();
+
+        </script>
+
+        <!-- Follor up Text for disease description -->
+        <div class ="container">
+            <article class = "row">
+                <div class="col-lg-8">
+                    <article class="decription content">
+                        <p> 
+                            Prominent Diseases:
+                            <ul>
+                                <li>Diabetes mellitus (70.1% of deaths)</li>
+                                <li>Metabolic disorders (18.9% of deaths)</li>
+                                <li>Obesity and other hyperalimentation (5.6% of deaths)</li>
+                            </ul>
+                            Endocrine glands produce hormones that help regulate and control bodily processes. Endocrine diseases occur when an endocrine gland produces too much or too little of its respective hormone(s). The most common endocrine disease is diabetes, accounting for 70% of deaths in this category. Diabetes occurs when the body is unable to produce an adequate amount of insulin, causing blood sugar levels to be abnormally high. The second category, metabolic disorders, is a general category that encompasses a wide variety of metabolic disorders primarily focused on amino-acid metabolism and glycolysis. These metabolic disorders affect the body’s ability to synthesize ATP and NADH, molecules necessary for energy production.
+                            <br>
+                            <br>
+                            More info:
+                            <ul>
+                                <li><a href="https://www.cdc.gov/diabetes/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fdiabetes%2Findex.htm">Diabetes</a></li>
+                                <li><a href="https://rarediseases.info.nih.gov/diseases/diseases-by-category/14/metabolic-disorders">Metabolic Disorders</a></li>
+                                <li><a href="https://www.cdc.gov/obesity/index.html">Obesity and hyperalimentation</a></li>
+                            </ul>
+                        </p>
+                    </article>
+                </div>
+            </article>
+        </div>
+    </body>
+
+</html>

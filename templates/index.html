@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/js/stylesheet.css">
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+</head>
+
+<body">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+              <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Final Resting Trace</h1>
+            </div>
+        </div>
+
+        <div class="row">            
+            <div class="col-md-12">
+                <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;">Analyze mortalities in last 10 years to identify/predict possibilities of specific health conditions for an individual based on several demographic factors.</h4>
+            </div>
+        </div>
+
+        <div class="col-lg-4" style="background-color: white;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">List of diseases</h1>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <ul style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                            <li><a href="/respiratory_diseases">Diseases of the respiratory system (J00-J99)</a></li>
+                            <li><a href="/external_causes">External causes of morbidity and mortality (V01-Y98)</a></li>
+                            <li><a href="/nervous_system">Diseases of the nervous system (G00-G99)</a></li>
+                            <li><a href="/metabolic_disorders">Endocrine, nutritional and metabolic diseases (E00-E90)</a></li>
+                            <li><a href="/mental_disorders">Mental and behavioural disorders (F00-F99)</a></li>
+                        </ul>
+                    </td>    
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-lg-4" style="background-color: white;">
+            <table class="table">
+                <thead>
+                    <tr><h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Search parameters</h1></tr>
+                </thead>
+                  <tr>
+                      <td>
+                        <ul style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                            <li>Age</li>
+                            <li>Education</li>
+                            <li>Marital status</li>
+                            <li>Gender</li>
+                            <li>Race</li>
+                        </ul>
+                      </td>
+                  </tr>
+            </table>
+        </div>
+
+        <div class="col-lg-4" style="background-color: white;">
+            <table class="table" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                <thead>
+                    <tr>
+                      <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">How it works</h1>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td>
+                        <img style="float:left;" width="300" src="../static/images/howitworks.png">
+                    </td>  
+                  </tr>
+                  <tr>
+                    <td>
+                        <a href="/predict" class="btn btn-primary">Find Health Risks</a>
+                    </td>
+                  </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="http://127.0.0.1:5500/js/plots.js"></script>
+</body>
+
+</html>

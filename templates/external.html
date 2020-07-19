@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>External causes of morbidity and mortality (V01-Y98)</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/js/stylesheet.css">
+        <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    </head>
+
+
+<!-- Note: navbar is small for some reason and extends across the screen -->
+    <body>
+        <div class = "row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">External causes of morbidity and mortality</h1>
+              </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <div id="vizContainer"></div>
+            </div>
+        </div>
+        <!-- tableu javascript code import -->
+        <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+        <script>
+            var viz
+
+            // function to put tableau on screen, using example link.
+            function initViz() {
+                var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/COD_external_15951111796760/ExternalDash?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"; // <- insert link here
+                viz = new tableau.Viz(containerDiv, url);
+            }
+            initViz();
+
+        </script>
+
+        <!-- Follor up Text for disease description -->
+        <div class ="container">
+            <article class = "row">
+                <div class="col-lg-8">
+                    <article class="decription content">
+                        <p> 
+                            Top Causes of Death:
+                            <ul>
+                                <li>Other external causess (46.2% of deaths)
+                                    <ul>
+                                        <li>Falling/Drowning</li>
+                                        <li>Exposure to electric current, radiation, extreme temperature</li>
+                                        <li>Exposure to smoke, fire, flames</li>
+                                    </ul>
+                                </li>
+                                <li>Transport Accidents (20.5% of deaths)
+                                    <ul>
+                                        <li>Car/Motorcycle/Bus Accidents</li>
+                                        <li>Pedestrian/Bicycle Accidents</li>
+                                        <li>Other land/water/air transport</li>
+                                    </ul>
+                                </li>
+                                <li>Intentional Self-Harm (20.0% of deaths)</li>
+                                <li>Assault (8.6% of deaths)</li>
+                            </ul>
+                            External causes of morbidity is a unique category in that age has an inverse effect on risk compared to other categories. Sub-chapters in this category that are particularly skewed towards younger individuals are transport accidents, intentional self-harm, and assault. This category is also heavily skewed towards males, with males accounting for 71.2% of the total deaths.
+                            <br>
+                            <br>
+                            More info:
+                            <ul>
+                                <li><a href="https://www.cdc.gov/homeandrecreationalsafety/falls/adultfalls.html">Falling</a></li>
+                                <li><a href="https://www.cdc.gov/homeandrecreationalsafety/water-safety/waterinjuries-factsheet.html">Drowning</a></li>
+                                <li><a href="https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries">Transport Accidents</a></li>
+                            </ul>
+                        </p>
+                    </article>
+                </div>
+            </article>
+        </div>
+    </body>
+
+</html>

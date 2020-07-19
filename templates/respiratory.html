@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Diseases of the respiratory system (J00-J99)</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/js/stylesheet.css">
+        <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    </head>
+
+<!-- Note: navbar is small for some reason and extends across the screen -->
+<body>
+    <div class = "row">
+        <div class="col-md-12 jumbotron text-center">
+            <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Diseases of the respiratory system</h1>
+          </div>
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <div id="vizContainer"></div>
+        </div>
+    </div>
+    <!-- tableu javascript code import -->
+    <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script>
+        var viz
+
+        // function to put tableau on screen, link.
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+            url = "https://public.tableau.com/views/COD_2_Multi_tabtest/ResDash?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"; // <- insert link here
+            viz = new tableau.Viz(containerDiv, url);
+            
+        }
+        initViz();
+
+    </script>
+
+    <!-- Follor up Text for disease description -->
+    <div class ="container">
+        <article class = "row">
+            <div class="col-md-8">
+                <article class="decription content">
+                    <p> 
+                        Prominent Diseases:
+                        <ul>
+                            <li>Chronic lower respiratory diseases (57.5% of deaths)
+                                <ul>
+                                    <li>Asthma</li>
+                                    <li>Bronchitis</li>
+                                    <li>Emphysema</li>
+                                </ul>
+                            </li>
+                            <li>Influenza and pneumonia (22.0% of deaths)</li>
+                        </ul>
+                        Chronic lower respiratory diseases account for over 50% of deaths related to the respiratory system. These diseases are heavily influenced by prolonged exposure to inhaled irritants such as cigarette smoke, air pollution, dust, or toxic gases. Viruses are also well-known causes of respiratory disease. Viruses typically cause respiratory disease because these pathogens are most commonly ingested by inhalation. Common symptoms related to respiratory disease are coughing, shortness of breath, and chest pain.
+                        <br>
+                        <br>
+                        More info:
+                        <ul>
+                            <li><a href="https://www.cdc.gov/asthma/">Asthma</a></li>
+                            <li><a href="https://www.cdc.gov/antibiotic-use/community/for-patients/common-illnesses/bronchitis.html">Bronchitis</a></li>
+                            <li><a href="https://www.cdc.gov/copd/index.html">Emphysema</a></li>
+                            <li><a href="https://www.cdc.gov/flu/index.htm">Influenza</a></li>
+                            <li><a href="https://www.cdc.gov/pneumonia/">Pneumonia</a></li>
+                        </ul>
+                    </p>
+                </article>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
